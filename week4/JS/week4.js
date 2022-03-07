@@ -100,7 +100,7 @@ app.component('pagination',{
 // 編輯元件
 app.component('productModal',{
     template:'#templateProductModal',
-    props:['tempProduct'],
+    props:['tempProduct','isNew'],
     methods:{
         updateProduct(){
             let method = 'put'
