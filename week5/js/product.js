@@ -49,7 +49,7 @@ const app = Vue.createApp({
                     this.products = res.data.products
                     this.pagination = res.data.pagination
                 }).catch(err => {
-                    console.log(err);
+                    alert(err.data.message);
                 })
         },
         getCart() {
@@ -57,7 +57,7 @@ const app = Vue.createApp({
                 .then(res => {
                     this.carts = res.data.data
                 }).catch(err => {
-                    console.log(err);
+                    alert(err.data.message);
                 })
         },
         toCurrency(num) {
@@ -136,7 +136,7 @@ const app = Vue.createApp({
                     this.form.message = ''
                 }).catch(err => {
                     console.log(err);
-                    alert("err.data.message")
+                    alert(err.data.message)
                 })
         }
     },
